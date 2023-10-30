@@ -87,11 +87,24 @@
 }
 
 .showMoreLink:hover {
-  background-color: #fff;
-  color: #7dcf57;
-  border: 1px solid #7dcf57;
+  background-color: #a55eea;
 }
 
 .showMoreLink:active {
   opacity: 0.5;
+}
+
+.searchLabel {
+  display: block;
+  margin: 20px auto;
+  font-size: 20px;
+}
+
+.searchInput {
+  padding: 2px 5px;
+}
+
+.searchInput:focus {
+  color: #a55eea;
+  box-shadow: 3px 3px 5px 0px #a55eea;
 }

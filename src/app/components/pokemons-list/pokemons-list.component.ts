@@ -6,12 +6,12 @@ import { DataService } from 'src/app/sevices/data.service';
   templateUrl: './pokemons-list.component.html',
   styleUrls: ['./pokemons-list.component.css'],
 })
-  
 export class PokemonsListComponent implements OnInit {
-  
   pokemons: any = [];
   offset: number = 0;
   limit: number = 6;
+  originalPokemons: any = [];
+  searchQuery: string = '';
 
   constructor(private dataService: DataService) {}
 
@@ -28,6 +28,7 @@ export class PokemonsListComponent implements OnInit {
             .getPokemonDetails(result.name)
             .subscribe((uniqueResponse: any) => {
               this.pokemons.push(uniqueResponse);
+              this.originalPokemons.push(uniqueResponse);
             });
         });
       });
@@ -36,5 +37,17 @@ export class PokemonsListComponent implements OnInit {
   getMore() {
     this.offset += this.limit;
     this.loadPokemons();
+  }
+
+  onSearch() {
+    if (this.searchQuery === '') {
+      this.pokemons = this.originalPokemons;
+    } else {
+      this.pokemons = this.originalPokemons.filter((pokemon: any) => {
+        return pokemon.name
+          .toLowerCase()
+          .includes(this.searchQuery.toLowerCase());
+      });
+    }
   }
 }

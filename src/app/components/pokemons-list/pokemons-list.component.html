@@ -1,6 +1,14 @@
 <main class="main">
   <section class="pokemons">
     <div class="container">
+      <label class="searchLabel">Search Pokemon: 
+        <input class="searchInput"
+          type="text"
+          placeholder="Put Pokemon Name"
+          [(ngModel)]="searchQuery"
+          (input)="onSearch()"
+        />
+      </label>
       <ul class="pokemonsList">
         <li class="pokemonsItem" *ngFor="let pokemon of pokemons">
           <figure class="pokemonFigure">
