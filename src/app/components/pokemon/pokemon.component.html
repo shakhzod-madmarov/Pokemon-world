@@ -1,0 +1,30 @@
+<main class="main">
+  <div class="container">
+    <div class="pokemonImg">
+      <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" />
+    </div>
+    <div class="pokemonInfo">
+      <ul class="pokemonInfoList">
+        <li>Id: {{ pokemon.id }}</li>
+        <li>Title: {{ pokemon.name }}</li>
+        <li>Height: {{ pokemon.height }}</li>
+        <li>Weight: {{ pokemon.weight }}</li>
+        <li>
+          Some Status:
+          <ul class="statusList">
+            <li class="statusItem">HP: {{ getStat("hp") }}</li>
+            <li class="statusItem">Attack: {{ getStat("attack") }}</li>
+            <li class="statusItem">Defense: {{ getStat("defense") }}</li>
+            <li class="statusItem">
+              Special Attack: {{ getStat("special-attack") }}
+            </li>
+            <li class="statusItem">
+              Special Defense: {{ getStat("special-defense") }}
+            </li>
+            <li class="statusItem">Speed: {{ getStat("speed") }}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>

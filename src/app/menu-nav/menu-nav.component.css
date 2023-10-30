@@ -1,0 +1,14 @@
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: #A55EEA;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+}
+
+.logoLink{
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0 20px;
+}

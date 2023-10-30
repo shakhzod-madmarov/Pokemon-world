@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  width: 70vw;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+}

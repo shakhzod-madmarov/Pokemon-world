@@ -1,0 +1,41 @@
+<main class="main">
+  <section class="pokemons">
+    <div class="container">
+      <ul class="pokemonsList">
+        <li class="pokemonsItem" *ngFor="let pokemon of pokemons">
+          <figure class="pokemonFigure">
+            <img
+              [src]="pokemon.sprites.front_default"
+              alt="Pokemon"
+              class="pokemonImg"
+            />
+            <figcaption class="pokemonId">ID: {{ pokemon.id }}</figcaption>
+          </figure>
+          <h2 class="pokemonName">{{ pokemon.name }}</h2>
+          <div class="pokemonDetails">
+            <p>
+              <strong>{{ pokemon.height }}</strong
+              >Height
+            </p>
+            <p>
+              <strong>{{ pokemon.base_experience }}</strong
+              >Experience
+            </p>
+            <p>
+              <strong>{{ pokemon.order }}</strong
+              >Order
+            </p>
+          </div>
+          <div>
+            <a [routerLink]="'/pokemon/' + pokemon.id" class="showMoreLink"
+              >Show more</a
+            >
+          </div>
+        </li>
+      </ul>
+      <button class="showMoreBtn" type="button" (click)="getMore()">
+        Show more
+      </button>
+    </div>
+  </section>
+</main>

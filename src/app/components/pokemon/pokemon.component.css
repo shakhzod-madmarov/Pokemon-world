@@ -1,0 +1,35 @@
+.pokemonImg img{
+  width: 300px;
+  height: 300px;
+}
+
+.container {
+  display: flex;
+  margin: 40px auto;
+  align-items: center;
+  gap: 50px;
+}
+
+.pokemonInfo {
+  max-width: 500px;
+  width: 55%;
+  height: auto;
+}
+
+.pokemonInfoList{
+    line-height: 2;
+}
+
+.statusList {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+}
+
+.statusItem {
+  background-color: #7dcf57;
+  color: #fff;
+  border-radius: 12px;
+  padding: 5px;
+  font-size: 12px;
+}
